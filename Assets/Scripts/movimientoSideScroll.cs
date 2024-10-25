@@ -43,4 +43,8 @@ public class movimientoSideScroll : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Suelo")) jumps = 2;
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Muerte")) transform.position = Vector2.zero;
+    }
 }
